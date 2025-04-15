@@ -19,36 +19,30 @@ public class exercisesSandwichShopApp {
         double s2_senior1st = (8.95 - (8.95 * 0.20));
         double s2_senior = Math.round(s2_senior1st * 100.0) / 100.0;
 
-        //age input
-        System.out.print("How old are you?:");
-        int age = scanner.nextInt();
-
-
+        // order number input
         System.out.println("   1-Regular");
         System.out.println("   2-Large");
         System.out.print("What order number do you want?:");
         int order_number = scanner.nextInt();
 
-
+        //age input
+        System.out.print("How old are you?:");
+        int age = scanner.nextInt();
 
         // dicount scanner
-        if(age <= 17 && order_number == 1){
-            System.out.println("you are "+ age + " years old, so you get a 10% discount and your total is "+ s1_student +"$");
-        } else if(age <= 17 && order_number == 2){
-            System.out.println("you are "+ age + " years old, so you get a 10% discount and your total is "+ s2_student +"$");
-        } else if(age >= 65 && order_number == 1){
-            System.out.println("you are "+ age + " years old, so you get a 10% discount and your total is "+ s1_senior +"$");
-        } else if(age >= 65 && order_number == 2){
-            System.out.println("you are "+ age + " years old, so you get a 10% discount and your total is "+ s2_senior +"$");
-        } else if(order_number == 1) {
-            System.out.println("you are "+ age +" do not get a discount and your total is "+ R +"$");
-        }else
-            System.out.println("you are "+ age +" do not get a discount and your total is "+ L +"$");
-
-
-
+        if (age <= 17 && order_number == 1) {
+            System.out.println("you are " + age + " years old, so you get a 10% discount and your total is " + s1_student + "$");
+        } else if (age <= 17 && order_number == 2) {
+            System.out.println("you are " + age + " years old, so you get a 10% discount and your total is " + s2_student + "$");
+        } else if (age >= 65 && order_number == 1) {
+            System.out.println("you are " + age + " years old, so you get a 10% discount and your total is " + s1_senior + "$");
+        } else if (age >= 65 && order_number == 2) {
+            System.out.println("you are " + age + " years old, so you get a 10% discount and your total is " + s2_senior + "$");
+        } else if (order_number == 1) {
+            System.out.println("you are " + age + " years old, so do not get a discount and your total is " + R + "$");
+        } else
+            System.out.println("you are " + age + " years old, so do not get a discount and your total is " + L + "$");
     }
-
 
 
 }
