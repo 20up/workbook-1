@@ -66,7 +66,7 @@ public class methodsExercises {
     }
 
     public static void usepotion(String player_name, String Item, int heal_amount){
-        System.out.println(" 6: "+ player_name + " used a "+ Item + " to heal chamander for "+ heal_amount +"HP");
+        System.out.println(" 6: "+ player_name + " used a "+ Item + " to heal charmander for "+ heal_amount +"HP");
     }
 
     public static void whiteout(String white_out){
