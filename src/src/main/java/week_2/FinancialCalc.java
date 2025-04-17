@@ -6,7 +6,8 @@ public class FinancialCalc {
     static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
 
-// mortgage calc
+
+        //asked what calc u want to use
         System.out.println("(1) Mortgage Calc | (2) Future Value Calc");
         System.out.print("Pick what number calc you want:");
         int calc_choice = scanner.nextInt();
@@ -57,31 +58,35 @@ public class FinancialCalc {
         System.out.println(" ($" + monthly_payments + "/mo) payment with a total interest of ($" + total_interest1st + ").");
     }
 
-    // method for calc 2
+//                  method for calc 2
     public static void futurevalue() {
 
-        //deposit
+//                 deposit
         System.out.print("1: The deposit amount:");
         double initial_deposit_amount = scanner.nextInt();
-        //annual interest rate
+
+//                 annual interest rate
         System.out.print("2: How much is your interest rate?:");
         double r1st = scanner.nextDouble();
         double annual_interest_rate = r1st / 100;
-        //number of years
+
+//                 number of years
         System.out.print("3: How many years for your deposit?:");
         int number_of_years = scanner.nextInt();
-        //day per year
+
+//                 day per year
         int days_per_year = number_of_years * 365;
-        //future value
+
+//                 future value
         double future_value1st = initial_deposit_amount * Math.pow( 1 + (annual_interest_rate / 365) , (356 * number_of_years));
         double future_value = Math.round(future_value1st * 100.0) / 100.0;
-//        double future_value = future_value2nd + 1.53;
+        //double future_value = future_value2nd + 1.53;
 
-        //total interest
+//                 total interest
         double total_interest1st = future_value - initial_deposit_amount;
         double total_interest = Math.round(total_interest1st * 100.0) / 100.0;
 
-        //output future value and total interest
+//                  output future value and total interest
         System.out.println(" ");
         System.out.println("  :If you deposit $"+ initial_deposit_amount + " in a CD that earns "+ r1st + "% interest and");
         System.out.println("   matures in "+ number_of_years + " years, your CD's ending balance will");
