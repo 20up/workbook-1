@@ -1,4 +1,4 @@
-package week_2;
+package mini_projects;
 
 import java.util.Scanner;
 

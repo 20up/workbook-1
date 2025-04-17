@@ -47,7 +47,7 @@ static Scanner scanner = new Scanner(System.in);
         System.out.println("first name "+ first_name );
         System.out.println("middle name "+ middle_name);
         System.out.println("last name "+ last_name);
-        String nr = "5";
+
 
 
 
