@@ -7,7 +7,16 @@ public class FinancialCalc {
     public static void main(String[] args) {
 
 // mortgage calc
-        mortgageCalc();
+        System.out.println("(1) Mortgage Calc | (2) Future Value Calc");
+        System.out.print("Pick what number calc you want:");
+        int calc_choice = scanner.nextInt();
+
+        if(calc_choice == 1){
+            mortgageCalc();
+        } else if (calc_choice == 2){
+            futurevalue();
+        }
+
 
         scanner.close();
     }
@@ -53,22 +62,40 @@ public class FinancialCalc {
 
         //deposit
         System.out.print("1: The deposit amount:");
-        double P = scanner.nextInt();
+        double initial_deposit_amount = scanner.nextInt();
         //annual interest rate
         System.out.print("2: How much is your interest rate?:");
-        double r1st = scanner.nextInt();
-        double r = r1st / 100;
+        double r1st = scanner.nextDouble();
+        double annual_interest_rate = r1st / 100;
         //number of years
-
+        System.out.print("3: How many years for your deposit?:");
+        int number_of_years = scanner.nextInt();
         //day per year
-
-        //total number of days
-
-        //total number of days
-
+        int days_per_year = number_of_years * 365;
         //future value
+        double future_value1st = initial_deposit_amount * Math.pow( 1 + (annual_interest_rate / 365) , (356 * number_of_years));
+        double future_value = Math.round(future_value1st * 100.0) / 100.0;
+//        double future_value = future_value2nd + 1.53;
+
+        //total interest
+        double total_interest1st = future_value - initial_deposit_amount;
+        double total_interest = Math.round(total_interest1st * 100.0) / 100.0;
 
         //output future value and total interest
+        System.out.println(" ");
+        System.out.println("  :If you deposit $"+ initial_deposit_amount + " in a CD that earns "+ r1st + "% interest and");
+        System.out.println("   matures in "+ number_of_years + " years, your CD's ending balance will");
+        System.out.println("   be $"+ future_value + " and you would have earned %"+ total_interest + " in interest.");
+
+    }
+
+    public static void present_value(){
+        //monthly payout
+
+        //expected interest rates
+
+        //years to pay out from the user
+
 
     }
 
