@@ -12,7 +12,7 @@ public class methodExercises2 {
         //2
         int orginal_number = 10;
         System.out.println("2: orginal #: " + orginal_number);
-        int result = doubleXP(10);
+        int result = doubleXP(orginal_number);
         System.out.println("number x2: " + result);
 
         //3
@@ -50,9 +50,9 @@ public class methodExercises2 {
         int currentGold = scanner.nextInt();
         System.out.print("   What is your gold you found:");
         int goldFound = scanner.nextInt();
-       int addgold = addGold(currentGold, goldFound);
+        int addgold = addGold(currentGold, goldFound);
 
-        if (goldFound >= 100){
+        if (goldFound >= 100) {
             double taxedG = goldFound - (goldFound * 0.10);
             System.out.println("taxed total: " + (taxedG + currentGold));
         } else
@@ -63,19 +63,20 @@ public class methodExercises2 {
         int totaltask = 20;
         System.out.print("   how many task did you complete: ");
         int tasksDone = scanner.nextInt();
-        isQuestComplete(tasksDone,totaltask);
-        if (tasksDone == totaltask){
+        isQuestComplete(tasksDone, totaltask);
+        if (tasksDone == totaltask) {
             System.out.println("✅ Quest complete!");
-        }else
+        } else
             System.out.println("⏳ You still have work to do.");
 
         //10
         boolean deafeat_boss = isBossDefeated(100, 50, true);
-        System.out.println("10: "+ deafeat_boss);
+        System.out.println("10: " + deafeat_boss);
 
 
     }
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    /// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //1
     public static String getPlayerTitle(String name) {
         return name;
@@ -128,26 +129,26 @@ public class methodExercises2 {
 
     //8
     public static int addGold(int currentGold, int goldFound) {
-        return  currentGold + goldFound;
+        return currentGold + goldFound;
     }
 
     //9
-    public static boolean isQuestComplete(int tasksDone, int totalTasks){
-        if (tasksDone == totalTasks){
+    public static boolean isQuestComplete(int tasksDone, int totalTasks) {
+        if (tasksDone == totalTasks) {
             return true;
-        }else
+        } else
             return false;
     }
 
     //10
-    public static boolean isBossDefeated(int playerHP, int bossHP, boolean usedPotion){
-        if(bossHP <= 0){
+    public static boolean isBossDefeated(int playerHP, int bossHP, boolean usedPotion) {
+        if (bossHP <= 0) {
             return true;
-        }else if(playerHP <=0 && usedPotion == false){
+        } else if (playerHP <= 0 && usedPotion == false) {
             return false;
-        }else if(usedPotion){
+        } else if (usedPotion) {
             return playerHP + 50 > bossHP;
-        }else
+        } else
             return playerHP > bossHP;
 
     }
