@@ -10,7 +10,6 @@ public class mini_project_2_sentence_analysis {
         //asks for sentence
         System.out.print("1: Enter sentence:");
         String sentence = scanner.nextLine();
-
         //count
         int length = sentence.length();
         System.out.println("   your sentence has ("+ length +") characters.");
